@@ -30,11 +30,11 @@ Builds everything (slow)
 
 > admin
 
-Build the admin only
+Build admin
 
 > mobile
 
-Build the (mobile)
+Build mobile
 
 > login
 
@@ -42,7 +42,7 @@ Build login
 
 > svg
 
-Build the SVG sprite
+Build SVG sprite
 
 > tasks
 
