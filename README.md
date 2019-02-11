@@ -38,7 +38,7 @@ Build the (mobile)
 
 > login
 
-Buif login
+Build login
 
 > svg
 
