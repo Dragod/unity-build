@@ -3,7 +3,7 @@ Bash script to run unity-build
 
 ### Alias for Bash
 
-> A bunch of useful alias for running git, directory, sass build etc
+> A bunch of useful alias for grunt
 
 1. This will only work on a bash command line
 2. Download the  repo and copy ```grunt.sh``` file in the main project folder
