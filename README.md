@@ -18,25 +18,25 @@ Bash script to run unity-build
 
 ### Build alias and tasks
 
-| Build Name    | Description                           |
-|---------------|---------------------------------------|
-| core          | build main unity css                  |
-| colors        | build brand colors                    |
-| core-colors   | build main unity css and brand colors |
-| complete      | builds everything                     |
-| admin         | build admin                           |
-| mobile        | build mobile                          |
-| login         | build login                           |
-| svg           | build SVG sprite                      |
-| tasks         | Show available grunt tasks            |
+| Build Name    | Description                            |
+|---------------|:---------------------------------------|
+| core          | build main unity css                   |
+| colors        | build brand colors                     |
+| core-colors   | build main unity css and brand colors  |
+| complete      | builds everything                      |
+| admin         | build admin                            |
+| mobile        | build mobile                           |
+| login         | build login                            |
+| svg           | build SVG sprite                       |
+| tasks         | Show available grunt tasks             |
 
 ### Build alias and watch
 
-| Build Name    | Description                           |
-|---------------|---------------------------------------|
-| core-w        | build main unity css and watch        |
-| colors-w      | build brand colors and watch          |
-| core-colors-w | build brand colors and watch          |
+| Build Name    | Description                            |
+|---------------|:---------------------------------------|
+| core-w        | build main unity css and watch         |
+| colors-w      | build brand colors and watch           |
+| core-colors-w | build brand colors and watch           |
 
 
 
