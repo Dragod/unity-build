@@ -5,6 +5,7 @@ Bash script to run unity sass builds
 
 1. This will only work on a ```bash/git-bash``` command line
 2. Download/clone the repo and copy ```grunt.sh``` & ```grunt-config.json``` in the main unity folder
+3. Make sure ```grunt-config.json``` is *NOT* tracked by git as everyone might use a different directory path on they're own machine, if this is tracked by git it might break the automation on main.css skin path
 3. Change the path in ```grunt-config.json``` to match your unity path:
 ```json
 {
