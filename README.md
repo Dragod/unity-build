@@ -5,15 +5,16 @@ Bash script to run unity-build
 
 > A bunch of useful alias for grunt
 
-1. This will only work on a bash command line
-2. Download the  repo and copy ```grunt.sh``` file in the main project folder
-3. Open a bash command line and type ```source grunt.sh```
-4. Create a ```grunt-config.json``` file in your main folder and type the correct folder to automate the main.css with the skin you choose to build
+1. This will only work on a bash/git-bash command line
+2. Download the  repo and copy ```grunt.sh``` file & ```grunt-config.json``` in the main project folder
+3. Change the path in ```grunt-config.json``` to match your project path:
 ```json
 {
     "css": ["C:/your-unity-folder-name-here/sd-unity-4-0/css"]
 }
 ```
+3. Open a bash command line and type ```source grunt.sh```
+
 5. If you done all the above correctly, you should be now able to use aliases in a bash shell
 
 ### Build alias and tasks
