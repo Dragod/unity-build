@@ -13,7 +13,7 @@ Bash script to run unity-build
     "css": ["C:/your-unity-folder-name-here/sd-unity-4-0/css"]
 }
 ```
-3. Open a bash command line and type ```source grunt.sh```
+4. Open a bash command line and type ```source grunt.sh```
 
 5. If you done all the above correctly, you should be now able to use aliases in a bash shell
 
