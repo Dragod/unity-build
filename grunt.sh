@@ -10,12 +10,20 @@ GREEN=`tput setaf 2`
 
 RED='\033[0;31m'
 
+
+readarray -t pathName < <(grep '"' grunt-config.json | cut -d '"' -f4)
+
 # Sass build only core
 # Use: type "core" in the console
 
 function core()
 {
-  printf "\n${GREEN} Build only core...\n\n"
+
+  # User input message
+
+  printf "\n${GREEN} Sass: Build only core...\n\n"
+
+  # Build sass
 
   eval "grunt sd-core"
 
@@ -26,7 +34,11 @@ function core()
 
 function core-w()
 {
+  # User input message
+
   printf "\n${GREEN} Sass: Build only core & watch...\n\n"
+
+  # Build sass
 
   eval "grunt sd-core-watch"
 
@@ -46,6 +58,18 @@ function colors()
     return
 
   else
+
+    # User input message
+
+    printf "\nBrand selected: $brand...\n\n"
+
+    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+
+    #Override the main.css
+
+    echo "@import url(\"../css/app.css\"); @import url(\"../assets/$brand/css/$brand.css\");" >${pathName[@]}/main.css
+
+    # Build sass
 
     eval "grunt sd-color --skin=$brand"
 
@@ -68,6 +92,18 @@ function colors-w()
 
   else
 
+    # User input message
+
+    printf "\nBrand selected: $brand...\n\n"
+
+    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+
+    #Override the main.css
+
+    echo "@import url(\"../css/app.css\"); @import url(\"../assets/$brand/css/$brand.css\");" >${pathName[@]}/main.css
+
+    # Build sass
+
     eval "grunt sd-color-watch --skin=$brand"
 
   fi
@@ -89,6 +125,17 @@ function core-colors()
 
   else
 
+    # User input message
+
+    printf "\nBrand selected: $brand...\n\n"
+    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+
+    #Override the main.css
+
+    echo "@import url(\"../css/app.css\"); @import url(\"../assets/$brand/css/$brand.css\");" >${pathName[@]}/main.css
+
+    # Build sass
+
     eval "grunt sd --skin=$brand"
 
   fi
@@ -109,6 +156,17 @@ function core-colors-w()
     return
 
   else
+
+    # User input message
+
+    printf "\nBrand selected: $brand...\n\n"
+    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+
+    #Override the main.css
+
+    echo "@import url(\"../css/app.css\"); @import url(\"../assets/$brand/css/$brand.css\");" >${pathName[@]}/main.css
+
+    # Build sass
 
     eval "grunt sd-watch --skin=$brand"
 
@@ -185,6 +243,17 @@ function complete()
     return
 
   else
+
+    # User input message
+
+    printf "\nBrand selected: $brand...\n\n"
+    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+
+    #Override the main.css
+
+    echo "@import url(\"../css/app.css\"); @import url(\"../assets/$brand/css/$brand.css\");" >${pathName[@]}/main.css
+
+    # User input message
 
     eval "grunt default --skin=$brand"
 
