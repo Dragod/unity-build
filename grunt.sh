@@ -63,7 +63,7 @@ function colors()
 
     printf "\nBrand selected: $brand...\n\n"
 
-    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -96,7 +96,7 @@ function colors-w()
 
     printf "\nBrand selected: $brand...\n\n"
 
-    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -128,7 +128,7 @@ function core-colors()
     # User input message
 
     printf "\nBrand selected: $brand...\n\n"
-    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -160,7 +160,7 @@ function core-colors-w()
     # User input message
 
     printf "\nBrand selected: $brand...\n\n"
-    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -247,7 +247,7 @@ function complete()
     # User input message
 
     printf "\nBrand selected: $brand...\n\n"
-    printf "${GREEN}Rewrite @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
