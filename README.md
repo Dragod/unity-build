@@ -13,10 +13,9 @@ Bash script to run unity-build
 {
     "css": ["C:/your-unity-folder-name-here/sd-unity-4-0/css"]
 }
- ```
+```
 5. If you done all the above correctly, you should be now able to use aliases in a bash shell
 
-<<<<<<< HEAD
 ### Build alias and tasks
 
 | Build Name    | Description                          |
@@ -38,45 +37,6 @@ Bash script to run unity-build
 | core-w        | build main unity css and watch       |
 | colors-w      | build brand colors and watch         |
 | core-colors-w | build brand colors and watch         |
-=======
-### Available alias
-
-> core (run core-w, if you want actively watch)
-
-Build only the main unity css
-
-> colors (run colors-w, if you want to actively watch)
-
-Build only a specific brand color
-
-> core-colors (run core-colors-w, if you want to actively watch)
-
-Builds the main unity css and a specific brand color
-
-> complete
-
-Builds everything (slow)
-
-> admin
-
-Build admin
-
-> mobile
-
-Build mobile
-
-> login
-
-Build login
-
-> svg
-
-Build SVG sprite
-
-> tasks
-
-Show available grunt tasks
->>>>>>> 9cd4c6f37d7852756c0b61243549f4ecba83ca86
 
 
 
