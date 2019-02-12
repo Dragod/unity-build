@@ -1,11 +1,9 @@
-# unity-build
-Bash script to run unity-build
+# Unity-build
+Bash script to run unity sass builds
 
-### Alias for Bash
+### How to use:
 
-> A bunch of useful alias for grunt
-
-1. This will only work on a bash/git-bash command line
+1. This will only work on a ```bash/git-bash``` command line
 2. Download the  repo and copy ```grunt.sh``` file & ```grunt-config.json``` in the main project folder
 3. Change the path in ```grunt-config.json``` to match your project path:
 ```json
