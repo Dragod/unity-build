@@ -1,5 +1,5 @@
 # Unity-build
-Bash script to run unity grunt tasks to compile sass
+Bash script to run unity grunt tasks and automate main.css skin color path
 
 ### How to use:
 
