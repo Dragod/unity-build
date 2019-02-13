@@ -20,7 +20,7 @@ Bash script to run unity sass builds
 ### Build alias and tasks
 
 | Build Name    | Description                            |
-|---------------|:---------------------------------------|
+|:--------------|:---------------------------------------|
 | core          | build main unity css                   |
 | colors        | build brand colors                     |
 | core-colors   | build main unity css and brand colors  |
@@ -34,7 +34,7 @@ Bash script to run unity sass builds
 ### Build alias and watch
 
 | Build Name    | Description                            |
-|---------------|:---------------------------------------|
+|:--------------|:---------------------------------------|
 | core-w        | build main unity css and watch         |
 | colors-w      | build brand colors and watch           |
 | core-colors-w | build brand colors and watch           |
