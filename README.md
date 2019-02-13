@@ -19,25 +19,25 @@ Bash script to run unity sass builds
 
 ### Build alias and tasks
 
-| Build Name    | Description                            |
-|:--------------|:---------------------------------------|
-| core          | build unity core                       |
-| colors        | build brand colors                     |
-| core-colors   | build main unity css and brand colors  |
-| complete      | builds everything                      |
-| admin         | build admin                            |
-| mobile        | build mobile                           |
-| login         | build login                            |
-| svg           | build SVG sprite                       |
-| tasks         | Show available grunt tasks             |
+| Bash command | Description                               |
+|:--------------|:-----------------------------------------|
+| core          | build unity core                         |
+| colors        | build brand colors                       |
+| core-colors   | builds unity core & brand colors         |
+| complete      | builds everything                        |
+| admin         | build admin                              |
+| mobile        | build mobile                             |
+| login         | build login                              |
+| svg           | build SVG sprite                         |
+| tasks         | Show available grunt tasks               |
 
 ### Build alias and watch
 
-| Build Name    | Description                            |
-|:--------------|:---------------------------------------|
-| core-w        | build main unity css and watch         |
-| colors-w      | build brand colors and watch           |
-| core-colors-w | build brand colors and watch           |
+| Bash command  | Description                              |
+|:--------------|:-----------------------------------------|
+| core-w        | build unity core & watch                 |
+| colors-w      | build brand colors and watch             |
+| core-colors-w | build unity core, brand colors & watch   |
 
 
 
