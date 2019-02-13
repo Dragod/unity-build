@@ -1,5 +1,5 @@
 # Unity-build
-Bash script to run unity sass builds
+Bash script to run unity grunt tasks to compile sass
 
 ### How to use:
 
