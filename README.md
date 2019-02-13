@@ -21,7 +21,7 @@ Bash script to run unity sass builds
 
 | Build Name    | Description                            |
 |:--------------|:---------------------------------------|
-| core          | build main unity css                   |
+| core          | build unity core                       |
 | colors        | build brand colors                     |
 | core-colors   | build main unity css and brand colors  |
 | complete      | builds everything                      |
