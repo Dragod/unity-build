@@ -14,6 +14,8 @@ RED=`tput setaf 1`
 
 BOLD=`tput bold`
 
+# Create an array from an external configuration file
+
 readarray -t pathName < <(grep '"' grunt-config.json | cut -d '"' -f4)
 
 # Sass build only core
