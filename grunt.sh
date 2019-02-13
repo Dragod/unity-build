@@ -6,10 +6,13 @@
 
 GREEN=`tput setaf 2`
 
-# Red
+# Blue
 
-RED='\033[0;31m'
+RED=`tput setaf 1`
 
+# Bold
+
+BOLD=`tput bold`
 
 readarray -t pathName < <(grep '"' grunt-config.json | cut -d '"' -f4)
 
@@ -21,7 +24,7 @@ function core()
 
   # User input message
 
-  printf "\n${GREEN} Sass: Build only core...\n\n"
+  printf "${BLUE} Sass: Building core...\n\n"
 
   # Build sass
 
@@ -36,7 +39,7 @@ function core-w()
 {
   # User input message
 
-  printf "\n${GREEN} Sass: Build only core & watch...\n\n"
+  printf "\n${RED} Sass: Building core & watch...\n\n"
 
   # Build sass
 
@@ -49,7 +52,7 @@ function core-w()
 
 function colors()
 {
-  printf "\n${GREEN} Sass: Build skin colors...\n\n"
+  printf "\n${RED} Sass: Building skin colors...\n\n"
   read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
@@ -63,7 +66,7 @@ function colors()
 
     printf "\nBrand selected: $brand...\n\n"
 
-    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -82,7 +85,7 @@ function colors()
 
 function colors-w()
 {
-  printf "\n${GREEN} Sass: Build skin colors & watch...\n\n"
+  printf "\n${RED} Sass: Build skin colors & watch...\n\n"
   read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
@@ -96,7 +99,7 @@ function colors-w()
 
     printf "\nBrand selected: $brand...\n\n"
 
-    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -115,7 +118,7 @@ function colors-w()
 
 function core-colors()
 {
-  printf "\n${GREEN} Sass: Build core & skin colors...\n\n"
+  printf "\n${RED} Sass: Building core & skin colors...\n\n"
   read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
@@ -128,7 +131,7 @@ function core-colors()
     # User input message
 
     printf "\nBrand selected: $brand...\n\n"
-    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -147,8 +150,8 @@ function core-colors()
 
 function core-colors-w()
 {
-  printf "\n${GREEN} Sass: Build core, skin olors & watch...\n\n"
-  read -p "(brand name): " brand
+  printf "\n${RED} Sass: Building core, skin olors & watch...\n\n"
+  read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
 
@@ -160,7 +163,7 @@ function core-colors-w()
     # User input message
 
     printf "\nBrand selected: $brand...\n\n"
-    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -179,7 +182,7 @@ function core-colors-w()
 
 function admin()
 {
-  printf "\n${GREEN} Sass: Build only admin...\n\n"
+  printf "\n${RED} Sass: Building admin...\n\n"
 
   eval "grunt admin"
 
@@ -190,7 +193,7 @@ function admin()
 
 function mobile()
 {
-  printf "\n${GREEN} Sass: Build only mobile...\n\n"
+  printf "\n${RED} Sass: Building mobile...\n\n"
 
   eval "grunt mobile"
 
@@ -201,7 +204,7 @@ function mobile()
 
 function svg()
 {
-  printf "\n${GREEN} Sass: Build SVG sprite...\n\n"
+  printf "\n${RED} Sass: Building SVG sprite...\n\n"
 
   eval "grunt svg"
 
@@ -212,7 +215,7 @@ function svg()
 
 function login()
 {
-  printf "\n${GREEN} Sass: Build only login...\n\n"
+  printf "\n${RED} Sass: Building login...\n\n"
 
   eval "grunt login"
 
@@ -223,7 +226,7 @@ function login()
 
 function tasks()
 {
-  printf "\n${GREEN} Show Grunt tasks...\n\n"
+  printf "\n${RED} Show Grunt tasks...\n\n"
 
   eval "grunt availabletasks"
 
@@ -234,7 +237,7 @@ function tasks()
 
 function complete()
 {
-  printf "\n${GREEN} Sass: Complete build...\n\n"
+  printf "\n${RED} Sass: Doing complete build...\n\n"
   read -p "(brand name): " brand
 
   if [[ -z "$brand" ]]; then
@@ -247,7 +250,7 @@ function complete()
     # User input message
 
     printf "\nBrand selected: $brand...\n\n"
-    printf "${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -260,3 +263,7 @@ function complete()
   fi
 
 }
+
+# Clear bash for real (using "clear" doesn't really work)
+
+alias cls='printf "\033c"'
