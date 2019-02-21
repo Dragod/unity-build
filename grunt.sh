@@ -2,17 +2,25 @@
 
 # Sass build
 
-#Green
+# Green
 
 GREEN=`tput setaf 2`
 
-# Blue
+# Red
 
 RED=`tput setaf 1`
 
 # Bold
 
 BOLD=`tput bold`
+
+# Blue
+
+BLUE='\033[00;34m'
+
+# Light purple
+
+LIGHT_PURPLE='\e[1;35m'
 
 # Create an array from an external configuration file
 
@@ -26,11 +34,11 @@ function core()
 
   # User input message
 
-  printf "${BLUE} Sass: Building core...\n\n"
+  printf "\n${GREEN}Sass: Building core...\n\n"
 
   # Build sass
 
-  eval "grunt sd-core"
+  eval "grunt core"
 
 }
 
@@ -41,11 +49,11 @@ function core-w()
 {
   # User input message
 
-  printf "\n${RED} Sass: Building core & watch...\n\n"
+  printf "\n${GREEN}Sass: Building core & watch...\n\n"
 
   # Build sass
 
-  eval "grunt sd-core-watch"
+  eval "grunt core-watch"
 
 }
 
@@ -54,7 +62,7 @@ function core-w()
 
 function colors()
 {
-  printf "\n${RED} Sass: Building skin colors...\n\n"
+  printf "\n${GREEN}Sass: Building skin colors...\n\n"
   read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
@@ -64,11 +72,7 @@ function colors()
 
   else
 
-    # User input message
-
-    printf "\nBrand selected: $brand...\n\n"
-
-    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "\n${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -76,7 +80,7 @@ function colors()
 
     # Build sass
 
-    eval "grunt sd-color --skin=$brand"
+    eval "grunt colors --skin=$brand"
 
   fi
 
@@ -87,7 +91,7 @@ function colors()
 
 function colors-w()
 {
-  printf "\n${RED} Sass: Build skin colors & watch...\n\n"
+  printf "\n${GREEN}Sass: Build skin colors & watch...\n\n"
   read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
@@ -97,11 +101,7 @@ function colors-w()
 
   else
 
-    # User input message
-
-    printf "\nBrand selected: $brand...\n\n"
-
-    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "\n${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -109,7 +109,7 @@ function colors-w()
 
     # Build sass
 
-    eval "grunt sd-color-watch --skin=$brand"
+    eval "grunt colors-watch --skin=$brand"
 
   fi
 
@@ -120,7 +120,7 @@ function colors-w()
 
 function core-colors()
 {
-  printf "\n${RED} Sass: Building core & skin colors...\n\n"
+  printf "\n${GREEN}Sass: Building core & skin colors...\n\n"
   read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
@@ -130,10 +130,7 @@ function core-colors()
 
   else
 
-    # User input message
-
-    printf "\nBrand selected: $brand...\n\n"
-    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "\n${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -141,7 +138,7 @@ function core-colors()
 
     # Build sass
 
-    eval "grunt sd --skin=$brand"
+    eval "grunt core-colors --skin=$brand"
 
   fi
 
@@ -152,7 +149,7 @@ function core-colors()
 
 function core-colors-w()
 {
-  printf "\n${RED} Sass: Building core, skin olors & watch...\n\n"
+  printf "\n${GREEN}Sass: Building core, skin olors & watch...\n\n"
   read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
@@ -162,10 +159,7 @@ function core-colors-w()
 
   else
 
-    # User input message
-
-    printf "\nBrand selected: $brand...\n\n"
-    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "\n${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -173,7 +167,7 @@ function core-colors-w()
 
     # Build sass
 
-    eval "grunt sd-watch --skin=$brand"
+    eval "grunt core-colors-watch --skin=$brand"
 
   fi
 
@@ -184,9 +178,20 @@ function core-colors-w()
 
 function admin()
 {
-  printf "\n${RED} Sass: Building admin...\n\n"
+  printf "\n${GREEN}Sass: Building admin...\n\n"
 
   eval "grunt admin"
+
+}
+
+# Sass build only admin and watch
+# Use: type "admin" in the console
+
+function admin-w()
+{
+  printf "\n${GREEN}Sass: Building admin & watch...\n\n"
+
+  eval "grunt admin-watch"
 
 }
 
@@ -195,7 +200,7 @@ function admin()
 
 function mobile()
 {
-  printf "\n${RED} Sass: Building mobile...\n\n"
+  printf "\n${GREEN}Sass: Building mobile...\n\n"
 
   eval "grunt mobile"
 
@@ -206,7 +211,7 @@ function mobile()
 
 function svg()
 {
-  printf "\n${RED} Sass: Building SVG sprite...\n\n"
+  printf "\n${GREEN}Building SVG sprite...\n\n"
 
   eval "grunt svg"
 
@@ -217,7 +222,7 @@ function svg()
 
 function login()
 {
-  printf "\n${RED} Sass: Building login...\n\n"
+  printf "\n${GREEN}Sass: Building login...\n\n"
 
   eval "grunt login"
 
@@ -228,7 +233,7 @@ function login()
 
 function tasks()
 {
-  printf "\n${RED} Show Grunt tasks...\n\n"
+  printf "\n${GREEN}Show Grunt tasks...\n\n"
 
   eval "grunt availabletasks"
 
@@ -239,8 +244,8 @@ function tasks()
 
 function complete()
 {
-  printf "\n${RED} Sass: Doing complete build...\n\n"
-  read -p "(brand name): " brand
+  printf "\n${GREEN}Sass: Doing complete build...\n\n"
+  read -p "Enter brand name: " brand
 
   if [[ -z "$brand" ]]; then
 
@@ -249,10 +254,7 @@ function complete()
 
   else
 
-    # User input message
-
-    printf "\nBrand selected: $brand...\n\n"
-    printf "${RED}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
+    printf "\n${GREEN}Override @import in main.css with $brand, path: ${pathName[@]} ${NC}\n\n"
 
     #Override the main.css
 
@@ -269,3 +271,22 @@ function complete()
 # Clear bash for real (using "clear" doesn't really work)
 
 alias cls='printf "\033c"'
+
+# Print available build once the script is loaded
+
+function sass-build {
+  printf "\n${GREEN}"
+  printf "core         -->    Build core\n"
+  printf "core-w       -->    Build core and watch\n"
+  printf "colors       -->    Build skin colors\n"
+  printf "core-colors  -->    Builds core & skin colors\n"
+  printf "complete     -->    Builds everything & skin colors\n"
+  printf "admin        -->    Build admin\n"
+  printf "login        -->    Build login\n"
+  printf "mobile       -->    Build mobile\n"
+  printf "svg          -->    Build SVG sprite\n"
+  printf "tasks        -->    Show available grunt tasks\n\n"
+}
+
+printf "\n${GREEN}Sass build script ready...\n"
+printf '\nType: "sass-build" to see a list of available builds\n\n'
